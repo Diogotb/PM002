@@ -1,0 +1,71 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+
+\title{PM002}
+\author{Diogo Takamori Barbosa}
+\date{July 2024}
+
+\begin{document}
+
+\maketitle
+Uma metalúrgica está sendo contratada por uma fábrica de papel para projetar e construir um tanque retangular de aço, com base quadrada, sem tampa e com 500 m³ de volume. O tanque será construído soldando-se chapas de aço umas às outras ao longo das bordas. O desafio é determinar as dimensões para a base e para a altura que farão o tanque pesar o mínimo possível.
+(a) Descreva como você irá levar o peso em consideração para resolver o problema (custo-benefício);
+(b) Escreva uma fórmula S(x) para a  área do tanque em função da medida x do lado da base;
+(c) Construa o gráfico dessa função;
+(d) Faça uma animação da reta tangente percorrendo cada ponto do gráfico (em um domínio que faça sentido para o problema) e ilustre o momento em que a reta tangente é paralela ao eixo x.
+(e) Utilizando derivadas, encontre o valor de x que torna a área mínima.
+
+(a) Descrição de como levar o peso em consideração para resolver o problema (custo-benefício):
+
+Para minimizar o peso do tanque, devemos minimizar a área da superfície do tanque, uma vez que o peso do tanque é diretamente proporcional à quantidade de aço utilizado, que, por sua vez, é diretamente proporcional à área das chapas de aço usadas. Portanto, o objetivo é encontrar as dimensões da base e a altura que minimizam a área da superfície do tanque, mantendo o volume constante em 500 m³.
+
+(b) Fórmula \( S(x) \) para a área do tanque em função da medida \( x \) do lado da base:
+
+- \( x \) como o lado da base quadrada do tanque.
+- \( h \) como a altura do tanque.
+
+Sabemos que o volume \( V \) do tanque é dado por:
+\[ V = x^2 \cdot h \]
+\[ 500 = x^2 \cdot h \]
+\[ h = \frac{500}{x^2} \]
+
+A área da superfície \( S \) do tanque, que precisa ser minimizada, é composta pela área da base e pelas áreas das quatro paredes laterais. Assim:
+\[ S(x) = x^2 + 4 \cdot (x \cdot h) \]
+Substituindo \( h \):
+\[ S(x) = x^2 + 4 \cdot x \cdot \frac{500}{x^2} \]
+\[ S(x) = x^2 + \frac{2000}{x} \]
+
+(c) Construção do gráfico da função \( S(x) \) no Python:
+
+
+
+(d) Animação da reta tangente percorrendo cada ponto do gráfico:
+
+
+
+(e) Utilizando derivadas, encontrar o valor de \( x \) que torna a área mínima:
+
+Para encontrar o valor de \( x \) que minimiza a área, precisamos encontrar os pontos críticos de \( S(x) \) resolvendo \( \frac{dS}{dx} = 0 \).
+
+A derivada de \( S(x) \) é:
+\[ \frac{dS}{dx} = 2x - \frac{2000}{x^2} \]
+
+Definimos a derivada igual a zero:
+\[ 2x - \frac{2000}{x^2} = 0 \]
+\[ 2x = \frac{2000}{x^2} \]
+\[ 2x^3 = 2000 \]
+\[ x^3 = 1000 \]
+\[ x = 10 \]
+
+Então, a medida \( x \) do lado da base que minimiza a área é \( x = 10 \) metros.
+
+Para confirmar que esse valor é um mínimo, podemos verificar a segunda derivada de \( S(x) \):
+\[ \frac{d^2S}{dx^2} = 2 + \frac{4000}{x^3} \]
+
+Substituindo \( x = 10 \):
+\[ \frac{d^2S}{dx^2}\bigg|_{x=10} = 2 + \frac{4000}{10^3} = 2 + 0.4 = 2.4 \]
+
+Como a segunda derivada é positiva, \( x = 10 \) é um ponto de mínimo.
+
+
+\end{document}
